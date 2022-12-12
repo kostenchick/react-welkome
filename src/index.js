@@ -1,3 +1,6 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 class Counter extends React.Component {
     constructor(props) {
         super(props);
@@ -5,13 +8,11 @@ class Counter extends React.Component {
             count: 0
         };
     }
-
     increment() {
         this.setState({
             count: this.state.count+1
         });
     }
-
     decrement() {
         if(this.state.count > 0) {
             this.setState({
@@ -24,7 +25,6 @@ class Counter extends React.Component {
         }
         
     }
-
     render() {
         const h2 = React.createElement('h2', {}, this.state.count);
         const buttonDecrement = React.createElement('button', {onClick: () => {this.decrement()}}, '-')
